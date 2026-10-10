@@ -14,10 +14,10 @@ import threading
 from evdev import InputDevice, UInput, ecodes, list_devices
 from evdev.uinput import UInputError
 
-LOG = logging.getLogger("mouse-fix")
-VIRTUAL_NAME = "Mouse Fix Virtual Mouse"
-VIRTUAL_PHYS = "mouse-fix/uinput"
-DEFAULT_CONFIG = Path(__file__).resolve().with_name("mouse_fix.ini")
+LOG = logging.getLogger("clicknt")
+VIRTUAL_NAME = "clicknt Virtual Mouse"
+VIRTUAL_PHYS = "clicknt/uinput"
+DEFAULT_CONFIG = Path(__file__).resolve().with_name("clicknt.ini")
 
 
 def load_config(path):

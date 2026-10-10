@@ -1,11 +1,11 @@
 [Unit]
-Description=Mouse double-click bounce filter
+Description=clicknt mouse double-click bounce filter
 After=systemd-modules-load.service
 StartLimitIntervalSec=0
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 -u /usr/local/lib/mouse-fix/mouse_fix.py --config /etc/mouse-fix.ini
+ExecStart=/usr/bin/python3 -u /usr/local/lib/clicknt/clicknt.py --config /etc/clicknt.ini
 Restart=on-failure
 RestartSec=3
 User=root

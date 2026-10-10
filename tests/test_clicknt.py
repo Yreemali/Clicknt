@@ -5,7 +5,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
 
-import mouse_fix as fix
+import clicknt as fix
 from evdev import InputEvent, ecodes as e
 
 
