@@ -1,0 +1,20 @@
+[Unit]
+Description=Mouse double-click bounce filter
+After=systemd-modules-load.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /usr/local/lib/mouse-fix/mouse_fix.py --config /etc/mouse-fix.ini
+Restart=on-failure
+RestartSec=3
+User=root
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
